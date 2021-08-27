@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ddd5247383e9e1479ff3cb600284360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alvo: {fileID: 0}
+  alvo: {fileID: 1737051619}
   inimigoVisual: {fileID: 1130787064}
   velocidade: 100
   proximaDistanciaPontoDePatrulha: 3
@@ -2302,7 +2302,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1868716870
 Transform:
   m_ObjectHideFlags: 0

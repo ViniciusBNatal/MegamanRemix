@@ -45,7 +45,7 @@ public class ControleSonic : MonoBehaviour
         {
             animator.SetBool("CORRENDO", false);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && (animator.GetBool("NOCHAO") || pulos>0))
+        if (Input.GetKeyDown(KeyCode.Space) && pulos>0)
         {
             rb.AddForce(new Vector2(0, 4f), ForceMode2D.Impulse);
             animator.SetTrigger("PULAR");
@@ -71,13 +71,4 @@ public class ControleSonic : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position - diferenca, RAIO);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "TirarVida")
-        {
-            vidas--;
-            //marcadorVidas.text = "Vidas:" + vidas.ToString();
-            gameObject.transform.position = inicio;
-        }
-    }
 }

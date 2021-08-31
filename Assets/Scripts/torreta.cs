@@ -51,7 +51,7 @@ public class torreta : MonoBehaviour
         }
         if (detectado)
         {
-            arma.transform.up = direcao;
+            arma.transform.up = direcao * -1;
             if(Time.time > proximoTempoDeDisparo)
             {
                 proximoTempoDeDisparo = Time.time + 1 / taxaDeDisparo;

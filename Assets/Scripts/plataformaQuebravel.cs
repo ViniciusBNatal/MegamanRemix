@@ -2,27 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bala : MonoBehaviour
+public class plataformaQuebravel : MonoBehaviour
 {
-    public int dano = 1;
-
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<Animator>().GetBool("PISAO") == true)
         {
-            collision.gameObject.GetComponent<ControleSonic>().atualizaBarraDeVida(dano);
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
     }
 }

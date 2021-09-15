@@ -48,7 +48,6 @@ public class inimigoTerrestre : MonoBehaviour
         if (seguirHabilitadio && alvoEmDistancia() && seeker.IsDone())
         {
             seeker.StartPath(rb.position, alvo.position, OnPathComplete);
-
         }
     }
     private void segueCaminho()

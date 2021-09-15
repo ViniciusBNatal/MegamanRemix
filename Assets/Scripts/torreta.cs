@@ -9,6 +9,7 @@ public class torreta : MonoBehaviour
     public float forca;
     float proximoTempoDeDisparo = 0;
     Vector2 direcao;
+    public int dano;
     public GameObject bala;
     public Transform pontoDeDisparo;
     public Transform alvo;
@@ -50,6 +51,7 @@ public class torreta : MonoBehaviour
     private void atira()
     {
         GameObject balains = Instantiate(bala, pontoDeDisparo.position, Quaternion.identity);
+        balains.GetComponent<bala>().dano = dano;
         balains.GetComponent<Rigidbody2D>().AddForce(direcao * forca);
     }
     private void OnTriggerEnter2D(Collider2D collision)
